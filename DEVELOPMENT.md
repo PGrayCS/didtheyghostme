@@ -92,7 +92,7 @@ Reference: [Supabase x Clerk docs](https://supabase.com/partners/integrations/cl
 
 - Enter **Name** field: `supabase`
 
-- Under **Signing Key**, paste your Supabase JWT secret from Supabase dashboard -> **Project Settings** -> **JWT Keys** -> **Legacy JWT Secret**
+- Under **Signing Key**, paste your Supabase JWT secret from **Supabase dashboard -> Project Settings** -> **JWT Keys** -> **Legacy JWT Secret**
 
 This allows Clerk to issue Supabase-compatible JWTs for authenticated requests and Row Level Security.
 
@@ -114,8 +114,8 @@ To sync user creation and updates from Clerk to Supabase locally, you have two o
 
 
 **Option 2 - Webhooks (more advanced, require extra installation):**
-- Expose your local dev server with ngrok ([docs](https://ngrok.com/docs/integrations/webhooks/clerk-webhooks))
-- In Clerk dashboard -> **Configure -> Webhooks** for `user.created` / `user.updated` / `user.deleted`
+- Expose your local dev server with **ngrok** ([ngrok x Clerk docs](https://ngrok.com/docs/integrations/webhooks/clerk-webhooks))
+- In **Clerk dashboard -> Configure -> Webhooks** for `user.created` / `user.updated` / `user.deleted`
 
 Either option should result in a row being created in Supabase `user_data` table whenever a user sign up.
 

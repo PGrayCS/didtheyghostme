@@ -70,6 +70,9 @@ See a job listing (e.g., on LinkedIn), apply for it, and haven’t heard back? U
 
 ## How to Use
 
+For full local setup instructions (Supabase, Clerk, environment variables), see the [DEVELOPMENT.md](./DEVELOPMENT.md) guide.
+
+
 ### Install dependencies
 
 Ensure you're using the correct Node.js version, using [nvm](https://github.com/nvm-sh/nvm):
