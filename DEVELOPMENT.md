@@ -86,13 +86,13 @@ This runs everything in `supabase/migrations` against your remote database. Chec
 
 Reference: [Supabase x Clerk docs](https://supabase.com/partners/integrations/clerk#:~:text=5%3A%20Create%20a%20Supabase%20JWT%20template)
 
-- In Clerk Dashboard -> **Configure** -> **JWT Templates**
+- In **Clerk Dashboard** -> **Configure** -> **JWT Templates**
 
 - Click **Add new template**, then choose **Supabase**
 
 - Enter **Name** field: `supabase`
 
-- Under **Signing Key**, paste your Supabase JWT secret from **Supabase dashboard -> Project Settings** -> **JWT Keys** -> **Legacy JWT Secret**
+- Under **Signing Key**, paste your Supabase JWT secret from **Supabase dashboard** -> **Project Settings** -> **JWT Keys** -> **Legacy JWT Secret**
 
 This allows Clerk to issue Supabase-compatible JWTs for authenticated requests and Row Level Security.
 
@@ -106,8 +106,8 @@ To sync user creation and updates from Clerk to Supabase locally, you have two o
 
 **Option 1 - Manual (simple and quick):**
 
-- In **Clerk dashboard -> Users**, copy a user's `user_id`
-- Go to **Supabase Dashboard -> Table Editor -> user_data**
+- In **Clerk dashboard** -> **Users**, copy a user's `user_id`
+- Go to **Supabase Dashboard** -> **Table Editor** -> **user_data**
 - Insert a new row with
   - the copied `user_id`
   - any other required fields
@@ -115,7 +115,7 @@ To sync user creation and updates from Clerk to Supabase locally, you have two o
 
 **Option 2 - Webhooks (more advanced, require extra installation):**
 - Expose your local dev server with **ngrok** ([ngrok x Clerk docs](https://ngrok.com/docs/integrations/webhooks/clerk-webhooks))
-- In **Clerk dashboard -> Configure -> Webhooks** for `user.created` / `user.updated` / `user.deleted`
+- In **Clerk dashboard** -> **Configure** -> **Webhooks** for `user.created` / `user.updated` / `user.deleted`
 
 Either option should result in a row being created in Supabase `user_data` table whenever a user sign up.
 
